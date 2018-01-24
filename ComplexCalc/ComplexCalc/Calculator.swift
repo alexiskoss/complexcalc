@@ -41,5 +41,13 @@ class Calculator {
     func divide(lhs: Int, rhs: Int) -> Int {
         return lhs / rhs;
     }
+    
+    func count(_ numbers: [Int]) -> Int {
+        var total: Int = 0;
+        for number in numbers {
+            total += number;
+        }
+        return total;
+    }
 }
 
