@@ -49,5 +49,13 @@ class Calculator {
         }
         return total;
     }
+    
+    func avg(_ numbers: [Int]) -> Int {
+        var total: Int = 0;
+        for number in numbers {
+            total += number;
+        }
+        return total / numbers.count;
+    }
 }
 
