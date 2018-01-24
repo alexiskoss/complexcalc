@@ -26,12 +26,26 @@ class Calculator {
         return (lhs.0 + rhs.0, lhs.1 + rhs.1);
     }
     
+    func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        var total: [String: Int] = ["x": 0, "y": 0];
+        total["x"] = lhs["x"]! + rhs["x"]!;
+        total["y"] = lhs["y"]! + rhs["y"]!;
+        return total;
+    }
+    
     func subtract(lhs: Int, rhs: Int) -> Int {
         return lhs - rhs;
     }
     
     func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
         return (lhs.0 - rhs.0, lhs.1 - rhs.1);
+    }
+    
+    func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        var total: [String: Int] = ["x": 0, "y": 0];
+        total["x"] = lhs["x"]! - rhs["x"]!;
+        total["y"] = lhs["y"]! - rhs["y"]!;
+        return total;
     }
     
     func multiply(lhs: Int, rhs: Int) -> Int {
@@ -51,11 +65,7 @@ class Calculator {
     }
     
     func count(_ numbers: [Int]) -> Int {
-        var total: Int = 0;
-        for number in numbers {
-            total += number;
-        }
-        return total;
+        return numbers.count;
     }
     
     func avg(_ numbers: [Int]) -> Int {
