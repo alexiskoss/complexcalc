@@ -14,12 +14,28 @@ class Calculator {
         return lhs + rhs;
     }
     
+    func add(_ numbers: [Int]) -> Int {
+        var total: Int = 0;
+        for number in numbers {
+            total += number;
+        }
+        return total;
+    }
+    
     func subtract(lhs: Int, rhs: Int) -> Int {
         return lhs - rhs;
     }
     
     func multiply(lhs: Int, rhs: Int) -> Int {
         return lhs * rhs;
+    }
+    
+    func multiply(_ numbers: [Int]) -> Int {
+        var total: Int = 1;
+        for number in numbers {
+            total *= number;
+        }
+        return total;
     }
     
     func divide(lhs: Int, rhs: Int) -> Int {
